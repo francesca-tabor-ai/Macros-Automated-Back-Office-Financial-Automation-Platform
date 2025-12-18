@@ -1,0 +1,24 @@
+I want to create a Python script for financial back-office automation.
+
+The script should:
+
+1. Open a file picker to select an Excel file (.xlsx or .xls).
+2. Read the Excel file, which has columns: Date, Description, Amount, Category.
+3. Clean the data:
+   - Remove empty rows
+   - Convert 'Amount' to numeric
+   - Convert 'Date' to proper datetime format
+   - Fill empty 'Category' cells with "Uncategorized"
+4. Validate the data:
+   - Flag transactions where Amount is missing or <= 0
+   - Flag transactions where Date is missing
+5. Summarize the data:
+   - Group by 'Category' and sum the 'Amount'
+6. Export a new Excel file with three sheets:
+   - "Cleaned_Data" → the cleaned dataset
+   - "Summary" → the summarized totals by category
+   - "Issues" → all flagged problematic rows
+7. Automatically name the output file with timestamp like: financial_report_YYYYMMDD_HHMMSS.xlsx
+8. Print messages in the terminal to show progress, like "Processing file..." and "Report generated successfully".
+
+Write clean, beginner-friendly Python code that uses pandas, openpyxl, and Tkinter for the file picker. Include comments explaining each step.
